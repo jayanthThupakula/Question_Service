@@ -19,5 +19,8 @@ jobs:
           java-version: '21'
           distribution: 'microsoft'
 
+      - name: Grant Execute Permission
+        run: chmod +x mvnw
+
       - name: Build Project
         run: ./mvnw clean package
