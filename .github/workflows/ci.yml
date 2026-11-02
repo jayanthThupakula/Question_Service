@@ -39,3 +39,8 @@ jobs:
 
       - name: Display Environment
         run: echo "Selected environment is ${{github.event.inputs.environment}}"
+
+      - name: Read Secret
+        env:
+          APP_NAME: ${{secrets.APP_NAME}}
+        run: echo "Application configured successfully"
