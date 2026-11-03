@@ -44,3 +44,9 @@ jobs:
         env:
           APP_NAME: ${{secrets.APP_NAME}}
         run: echo "Application configured successfully"
+
+      - name: Runner Details
+        run: |
+          echo "Runner Name: $RUNNER_NAME"
+          echo "Runner OS: $RUNNER_OS"
+          echo "Runner Architecture: $RUNNER_ARCH"
